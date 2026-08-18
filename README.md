@@ -61,11 +61,32 @@ flowchart TD
 
 ---
 
+## ⚡ Recommended LLM Proxy Gateway: AI-Gateway
+
+For maximum reliability, zero API cost, and high availability, we recommend pairing TG-Echo with [**AI-Gateway**](https://github.com/bilalshemsu1/ai-gateway) — an open-source AI orchestration proxy.
+
+### Why pair TG-Echo with AI-Gateway?
+- **Unified OpenAI Endpoint**: Provides a standard `/v1/chat/completions` API endpoint compatible with TG-Echo.
+- **Automatic Multi-Provider Load Balancing**: Dynamically routes requests to the least busy provider and falls back automatically if an API is down.
+- **Smart Free-Tier Orchestration**: Pools free tiers across 9+ providers (Groq, Gemini, Mistral, OpenRouter, OpenCodeZen, Zydit, Zai, Agnes, Nvidia) to keep your bot running 24/7 **at zero cost**.
+
+### Quick Integration Setup
+1. Set up [AI-Gateway](https://github.com/bilalshemsu1/ai-gateway).
+2. Point your TG-Echo `.env` configuration to your local AI-Gateway instance:
+
+```env
+LLM_API_URL=http://localhost:3001/v1/chat/completions
+LLM_API_KEY=your_ai_gateway_secret
+LLM_MODEL=auto
+```
+
+---
+
 ## 📋 Prerequisites
 
 1. **Node.js** (v18 or higher recommended)
 2. **Telegram API ID & API Hash**: Get them from [my.telegram.org](https://my.telegram.org).
-3. **OpenAI-Compatible LLM Gateway**: Any local or cloud endpoint (vLLM, LM Studio, Open-WebUI, Ollama, OpenRouter, OpenAI).
+3. **OpenAI-Compatible LLM Gateway**: Any local or cloud endpoint (vLLM, [AI-Gateway](https://github.com/bilalshemsu1/ai-gateway), Open-WebUI, Ollama, OpenRouter, OpenAI).
 
 ---
 
@@ -101,10 +122,10 @@ TG_SESSION=
 FETCH_TELEGRAM_HISTORY=true
 HISTORY_LIMIT=8
 
-# LLM Gateway Configuration
+# LLM Gateway Configuration (OpenAI compatible / AI-Gateway)
 LLM_API_URL=http://localhost:3001/v1/chat/completions
 LLM_API_KEY=your_llm_api_key_here
-LLM_MODEL=openai/gpt-oss-20b
+LLM_MODEL=auto
 
 # Safety & Typing Timings
 COOLDOWN_SECONDS=10
