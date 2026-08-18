@@ -19,6 +19,48 @@ Operates **100% locally** via Telegram MTProto (GramJS) — **NO Telegram Bot AP
 
 ---
 
+## 🏛️ System Architecture
+
+```mermaid
+flowchart TD
+    A[📩 Incoming Telegram DM] --> B{Gatekeeper Firewall}
+    
+    subgraph Gatekeeper & Guardrails
+        B -->|Blocked / Not Allowed| C[🛑 Ignore Message]
+        B -->|Sensitive Keywords / Money| D[🔒 Mark Read & Alert]
+        B -->|Allowed User| E[Context Unification Engine]
+    end
+
+    subgraph Context & History Engine
+        E --> F[Telegram Cloud MTProto History]
+        E --> G[Session Memory Buffer]
+        F & G --> H[mergeContextTurns Engine]
+        H -->|Clean Chronological History| I[Prompt & Payload Assembler]
+    end
+
+    subgraph LLM Gateway Dispatch
+        I --> J[System Prompt: Persona & Style Directives]
+        I --> K[Context History Payload]
+        J & K --> L[POST /v1/chat/completions]
+        L --> M[LLM Output Generation]
+    end
+
+    subgraph Post-Processing & Delivery
+        M --> N[Markdown to Telegram HTML]
+        N --> O[AI Leak Stripper]
+        O --> P[Multi-Bubble Splitter]
+        P --> Q[Human Typing Simulation]
+        Q --> R[GramJS MTProto Telegram Delivery]
+    end
+
+    subgraph Continuous Logging
+        R --> S[Append to logs/continuous_chat.log]
+        R --> T[Record Turn in Session RAM]
+    end
+```
+
+---
+
 ## 📋 Prerequisites
 
 1. **Node.js** (v18 or higher recommended)
@@ -32,8 +74,8 @@ Operates **100% locally** via Telegram MTProto (GramJS) — **NO Telegram Bot AP
 ### 1. Clone & Install Dependencies
 
 ```bash
-git clone https://github.com/your-username/telegram_auto_messenger.git
-cd telegram_auto_messenger
+git clone https://github.com/bilalshemsu1/TG-Echo.git
+cd TG-Echo
 npm install
 ```
 
