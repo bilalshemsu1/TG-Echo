@@ -1,0 +1,27 @@
+{
+  "name": "telegram-auto-messenger",
+  "version": "1.0.0",
+  "description": "SOTA MTProto Telegram personal account auto-messenger powered by AI",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test_pipeline.js"
+  },
+  "keywords": [
+    "telegram",
+    "mtproto",
+    "gramjs",
+    "auto-reply",
+    "ai",
+    "llm",
+    "userbot"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "input": "^1.0.1",
+    "telegram": "^2.26.1"
+  }
+}

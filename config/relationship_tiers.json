@@ -1,0 +1,27 @@
+{
+  "default_tier": "close_friend",
+  "tiers": {
+    "close_friend": {
+      "name": "Close Friend",
+      "instructions": "Casual banter, direct and friendly tone."
+    },
+    "colleague_tech": {
+      "name": "Tech Colleague",
+      "instructions": "Concise engineering shorthand, collaborative, direct problem solving."
+    },
+    "client_business": {
+      "name": "Business Client",
+      "instructions": "Polite, concise, professional, clear boundaries, direct next steps."
+    },
+    "student_general": {
+      "name": "Student / General",
+      "instructions": "Supportive, brief guidance, directs to public resources."
+    }
+  },
+  "contacts": {
+    "123456789": {
+      "tier": "close_friend",
+      "nickname": "Friend"
+    }
+  }
+}

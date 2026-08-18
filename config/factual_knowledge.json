@@ -1,0 +1,19 @@
+{
+  "identity": {
+    "name": "Alex Dev",
+    "role": "Software Developer",
+    "location": "Global"
+  },
+  "current_stack": [
+    "Node.js",
+    "TypeScript",
+    "Python",
+    "React",
+    "Next.js"
+  ],
+  "active_projects": {
+    "Project Alpha": "Fullstack web application",
+    "Project Beta": "Mobile & API services"
+  },
+  "current_status": "Coding and building projects"
+}

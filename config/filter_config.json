@@ -1,0 +1,36 @@
+{
+  "mode": "ALLOWLIST_ONLY",
+  "allowed_users": [
+    "ALL"
+  ],
+  "blocked_users": [],
+  "keyword_triggers": [
+    "project",
+    "price",
+    "hire",
+    "inquiry"
+  ],
+  "high_stakes_keywords": [
+    "send money",
+    "cbe",
+    "telebirr",
+    "bank account",
+    "transfer money",
+    "password",
+    "ssh key",
+    "private key",
+    "access token",
+    "api key",
+    "credentials",
+    "secret key"
+  ],
+  "high_stakes_patterns": [
+    "(send|transfer)\\s+money",
+    "cbe(\\s+birr)?",
+    "telebirr",
+    "pass(word)?",
+    "private_key",
+    "ssh-rsa",
+    "access_token"
+  ]
+}
