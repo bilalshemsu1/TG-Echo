@@ -63,7 +63,9 @@ flowchart TD
 
 ## ⚡ Recommended LLM Proxy Gateway: AI-Gateway
 
-For maximum reliability, zero API cost, and high availability, we recommend pairing TG-Echo with [**AI-Gateway**](https://github.com/bilalshemsu1/ai-gateway) — an open-source AI orchestration proxy.
+[![AI-Gateway Repository](https://img.shields.io/badge/GitHub-bilalshemsu1%2Fai--gateway-181717?style=for-the-badge&logo=github)](https://github.com/bilalshemsu1/ai-gateway)
+
+For maximum reliability, zero API cost, and high availability, we recommend pairing TG-Echo with [**AI-Gateway (bilalshemsu1/ai-gateway)**](https://github.com/bilalshemsu1/ai-gateway) — an open-source AI orchestration proxy.
 
 ### Why pair TG-Echo with AI-Gateway?
 - **Unified OpenAI Endpoint**: Provides a standard `/v1/chat/completions` API endpoint compatible with TG-Echo.
