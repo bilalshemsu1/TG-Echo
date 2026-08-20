@@ -14,14 +14,14 @@ async function runPipelineIntegrationTests() {
   assert(triStreamData.streamA, "Stream A should exist");
   assert(triStreamData.streamB, "Stream B should exist");
   assert.strictEqual(triStreamData.streamA.tier, "close_friend");
-  assert(triStreamData.streamB.identity.name, "Alex Dev");
+  assert(triStreamData.streamB.identity.name, "Bilal Shemsu");
   console.log("✅ Context Retrieval Test Passed!\n");
 
   // --- Test 2: System Prompt Synthesis ---
   console.log("Test 2: Testing System Prompt Synthesis...");
   const synthesizedPrompt = buildSystemPrompt(triStreamData);
-  assert(synthesizedPrompt.includes("Alex Dev"), "Prompt should contain Alex Dev");
-  assert(synthesizedPrompt.includes("CRITICAL PERSONA RULES"), "Prompt should contain CRITICAL PERSONA RULES section");
+  assert(synthesizedPrompt.includes("Bilal Shemsu"), "Prompt should contain Bilal Shemsu");
+  assert(synthesizedPrompt.includes("UNBREAKABLE HUMAN PERSONA DIRECTIVES"), "Prompt should contain persona directives section");
   console.log("✅ System Prompt Synthesis Test Passed!\n");
 
   // --- Test 3: Dispatch Payload Preparation ---

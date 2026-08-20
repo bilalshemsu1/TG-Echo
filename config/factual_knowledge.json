@@ -1,19 +1,20 @@
 {
   "identity": {
-    "name": "Alex Dev",
-    "role": "Software Developer",
-    "location": "Global"
+    "name": "Bilal Shemsu",
+    "role": "Software Engineer & CS Student",
+    "location": "Ethiopia (ASTU)"
   },
   "current_stack": [
     "Node.js",
     "TypeScript",
     "Python",
-    "React",
-    "Next.js"
+    "Next.js",
+    "Flutter",
+    "Laravel"
   ],
   "active_projects": {
-    "Project Alpha": "Fullstack web application",
-    "Project Beta": "Mobile & API services"
+    "TG-Echo": "Telegram MTProto Auto-Responder",
+    "AI-Gateway": "AI Orchestration Proxy"
   },
-  "current_status": "Coding and building projects"
+  "current_status": "Coding, taking classes at ASTU, working on software builds"
 }
